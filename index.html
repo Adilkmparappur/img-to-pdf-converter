@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="menu"></div>
+    
+    <div class="container">
+        <div class="headText">
+            <span>Convert Image to PDF</span>
+        </div>
+
+        
+        <div class="button">
+            <div class="upload">
+                <label tabindex="1" for="uploadImg">Drop file here<br>or<br>click to choose file</label>
+                <input type="file" name="" id="uploadImg" onchange="loadFile(event)" accept=".png, .jpg, .jpeg">
+                
+                <div class="img">
+                    <p id="imgName">No file slelected</p>
+                    <img id="showImg">
+                </div>
+
+            </div>
+
+            <button tabindex="2" id="downloadBtn" onclick="pdfDown()">Download To pdf</button>
+        </div>
+
+        <div class="footerDiv">
+
+            <footer>
+                
+                Designed by <span><a tabindex="3" href="https://linkedin.com/in/adil-km" target="_blank"  class="footerLink">ADIL K.M</a></span>
+                
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+    
+</body>
+</html>
